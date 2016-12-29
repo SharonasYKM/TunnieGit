@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.tunnie.FlyOutContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main">
+
+		<com.example.tunnie.MenuCustomeView
+		    android:id="@+id/menu1"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:onClick="toggleMenu">
+		</com.example.tunnie.MenuCustomeView>
+
+		<LinearLayout
+		    xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:background="#ffffff"
+		    android:orientation="vertical" >
+
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="#ffffff" >
+
+		        <ImageView
+		            android:id="@+id/menuButton"
+		            android:layout_width="63dp"
+		            android:layout_height="47dp"
+		            android:onClick="toggleMenu"
+		            android:src="@drawable/index" />
+
+		        <SearchView
+		            android:id="@+id/searchView0"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:queryHint="input song name/artist">
+		        </SearchView>
+		    </LinearLayout>
+
+		    <ProgressBar
+		        android:id="@+id/progressBar1"
+		        style="?android:attr/progressBarStyleLarge"
+		        android:layout_gravity="center_horizontal"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:visibility="gone" />
+
+		    <Button
+		        android:id="@+id/stopSearchBtn"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_horizontal"
+		        android:text="StopSearch"
+		        android:visibility="gone"  />
+
+
+            <ScrollView
+		        android:id="@+id/scrollView1"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="5" >
+
+		        <LinearLayout
+		            android:id="@+id/songDisplayLayout"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:orientation="vertical" >
+
+		            	<ListView
+		            	    android:id="@+id/list"
+		            	    android:layout_width="match_parent"
+		            	    android:layout_height="320dp"
+		            	    android:visibility="gone">
+				         </ListView>
+				         
+			       
+		        </LinearLayout>
+		    </ScrollView>
+
+		     <Button
+			        android:id="@+id/moreSongsBtn"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:text="More songs?"
+			        android:visibility="gone"/>
+
+		     <ProgressBar
+		         android:id="@+id/progressBarMoreSongs"
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:layout_gravity="center_horizontal"
+		         android:visibility="gone"/>
+
+		</LinearLayout>
+
+</com.example.tunnie.FlyOutContainer>

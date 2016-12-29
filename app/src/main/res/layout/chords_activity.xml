@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.tunnie.FlyOutContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main">
+
+    
+    <com.example.tunnie.MenuCustomeView
+	    android:id="@+id/menu1"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+	</com.example.tunnie.MenuCustomeView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+	        
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="#ffffff" >
+	
+	            <ImageView
+	                android:id="@+id/menuButton"
+	                android:layout_width="63dp"
+	                android:layout_height="47dp"
+	                android:onClick="toggleMenu"
+	                android:src="@drawable/index" />
+	
+	            <SearchView
+	                android:id="@+id/searchView1"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center" >
+	            </SearchView>
+	        </LinearLayout>
+	    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="1"
+	        android:background="#76c6b6"
+	        android:orientation="horizontal" >
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:id="@+id/toneDisplayLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+	            android:id="@+id/scrollView2"
+	            android:layout_width="fill_parent"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" >
+
+	            <LinearLayout
+	                android:id="@+id/typeChordDisplayLayout"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:orientation="vertical" >
+	            </LinearLayout>
+	        </ScrollView>
+
+            <ScrollView
+	            android:id="@+id/scrollView3"
+	            android:layout_width="fill_parent"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" >
+
+	            <LinearLayout
+	                android:id="@+id/knownChordsLayout"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:orientation="vertical" >
+
+	            </LinearLayout>
+	        </ScrollView>
+	    </LinearLayout>
+	
+	
+	    <com.example.tunnie.ChordDisplayCustomView
+		        android:id="@+id/chordDisplayCustumeView1"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:visibility="visible">
+		</com.example.tunnie.ChordDisplayCustomView>
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#ffffff">
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:orientation="vertical" >
+	
+	            <TextView
+	                android:id="@+id/difficltyTV"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Difficlty" />
+	
+	            <TextView
+	                android:id="@+id/importanceTV"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Importance" />
+	        </LinearLayout>
+	        <Button
+	            android:id="@+id/getChordDisplayBtn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.34"
+	            android:text="Display" />
+	        <Button
+	            android:id="@+id/iKnowBtn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.41"
+	            android:text="V" />
+	    </LinearLayout>
+    </LinearLayout>
+
+    
+
+</com.example.tunnie.FlyOutContainer>
